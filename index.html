@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Учитель-логопед, логопед-дефектолог высшей категории. 16 лет опыта коррекции ОНР, ФФНР, алалии, дизартрии, диспраксии, ринолалии у детей дошкольного возраста. Запуск речи, логопедический массаж, подготовка к школе.">
+<meta name="theme-color" content="#C1583A">
+<title>Учитель-логопед Гайсина Елена | Коррекция речи у детей</title>
+<style>
+  :root{
+    --cream:#FBF6EF;
+    --paper:#FFFFFF;
+    --line:#E7DDCF;
+    --ink:#2B2620;
+    --ink-soft:#6B6255;
+    --clay:#C1583A;
+    --clay-dark:#A5462C;
+    --moss:#7C8F5E;
+    --moss-dark:#647B49;
+    --gold:#D9A441;
+    --r-lg:18px;
+    --r-md:12px;
+    --shadow:0 3px 16px rgba(43,38,32,.08);
+    --ease:.2s ease;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--cream);color:var(--ink);line-height:1.55;font-size:16px;overflow-x:hidden;
+  }
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit;text-decoration:none}
+  button,.btn{font-family:inherit;cursor:pointer;border:none;outline:none}
+  .wrap{width:100%;max-width:980px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
+  h1,h2,h3{font-weight:800;letter-spacing:-.01em}
+  .sec{padding:52px 0}
+  .sec-title{font-size:clamp(1.4rem,4.4vw,1.9rem);text-align:center;margin-bottom:10px}
+  .sec-sub{text-align:center;color:var(--ink-soft);max-width:460px;margin:0 auto 30px;font-size:.98rem}
+
+  /* HEADER */
+  header{padding:16px 0}
+  .nav{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.02rem}
+  .brand-mark{width:34px;height:34px;border-radius:9px;background:var(--moss);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
+  .nav-call{font-weight:700;font-size:.92rem;color:var(--clay);white-space:nowrap}
+
+  /* HERO */
+  .hero{padding:12px 0 20px;position:relative}
+  .hero-grid{display:grid;gap:26px}
+  .hero h1{font-size:clamp(1.65rem,5.6vw,2.5rem);line-height:1.18;margin-bottom:14px}
+  .hero p.lead{color:var(--ink-soft);font-size:1.04rem;max-width:520px;margin-bottom:22px}
+  .trust-row{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:24px;font-size:.88rem;color:var(--ink-soft);font-weight:600}
+  .trust-row span{display:flex;align-items:center;gap:6px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 22px;border-radius:12px;font-weight:700;font-size:1rem;transition:transform var(--ease),background var(--ease),box-shadow var(--ease);min-height:52px}
+  .btn-primary{background:var(--clay);color:#fff;box-shadow:0 4px 14px rgba(193,88,58,.32)}
+  .btn-primary:active,.btn-primary:hover{background:var(--clay-dark);transform:translateY(-1px)}
+  .btn-ghost{background:var(--paper);color:var(--ink);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--moss);background:#F4EFE4}
+  .hero-photo{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3;background:var(--line);box-shadow:var(--shadow)}
+  .hero-photo img{width:100%;height:100%;object-fit:cover}
+  .hero-badge{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.94);padding:9px 13px;border-radius:11px;font-size:.82rem;font-weight:700;display:flex;align-items:center;gap:6px;box-shadow:var(--shadow)}
+
+  /* SIGNS (замена квиза — статично, быстро, без JS) */
+  .signs-card{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:26px 22px;max-width:600px;margin:0 auto}
+  .signs-list{list-style:none;display:grid;gap:12px;margin-bottom:22px}
+  .signs-list li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;font-weight:600}
+  .signs-list li::before{content:"—";color:var(--clay);font-weight:800;flex-shrink:0}
+  .signs-note{color:var(--ink-soft);font-size:.9rem;margin-bottom:18px}
+
+  /* SERVICES — статичный список, без аккордеона */
+  .services{display:grid;gap:14px}
+  .svc{background:var(--paper);border-radius:var(--r-md);box-shadow:var(--shadow);padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+  .svc-ic{width:42px;height:42px;border-radius:10px;background:#F4EFE4;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+  .svc h3{font-size:1rem;margin-bottom:4px}
+  .svc p{color:var(--ink-soft);font-size:.9rem}
+
+  /* CASES */
+  .cases{display:grid;gap:16px}
+  .case{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:20px}
+  .case-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .case-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--moss),var(--moss-dark));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+  .case-name{font-weight:700}
+  .case-age{font-size:.82rem;color:var(--ink-soft)}
+  .case-ba{display:grid;gap:10px;font-size:.92rem}
+  .case-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:3px}
+  .case-before{background:#F8EEE9;padding:11px 13px;border-radius:9px;border-left:3px solid #DDA48F}
+  .case-after{background:#F0F4EA;padding:11px 13px;border-radius:9px;border-left:3px solid var(--moss)}
+
+  /* ABOUT */
+  .about-grid{display:grid;gap:26px;align-items:center}
+  .about-photo{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:1;background:var(--line);box-shadow:var(--shadow);max-width:300px;margin:0 auto}
+  .about-photo img{width:100%;height:100%;object-fit:cover}
+  .about h2{font-size:clamp(1.35rem,4vw,1.7rem);margin-bottom:12px}
+  .about p{color:var(--ink-soft);margin-bottom:14px;font-size:.98rem}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+  .stat{text-align:center;padding:14px 6px;background:var(--paper);border-radius:var(--r-md);box-shadow:var(--shadow)}
+  .stat-num{font-size:1.35rem;font-weight:800;color:var(--clay)}
+  .stat-label{font-size:.76rem;color:var(--ink-soft);margin-top:3px}
+
+  /* STEPS */
+  .steps{display:grid;gap:14px}
+  .step{display:flex;gap:14px;align-items:flex-start;background:var(--paper);padding:17px 18px;border-radius:var(--r-md);box-shadow:var(--shadow)}
+  .step-num{width:34px;height:34px;border-radius:50%;background:var(--moss);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;font-size:.95rem}
+  .step h3{font-size:.98rem;margin-bottom:3px}
+  .step p{color:var(--ink-soft);font-size:.87rem}
+
+  /* REVIEWS */
+  .reviews{display:grid;gap:14px}
+  .review{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:18px}
+  .stars{color:var(--gold);font-size:.85rem;letter-spacing:1px;margin-bottom:8px}
+  .review-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .r-avatar{width:38px;height:38px;border-radius:50%;background:#F4EFE4;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--moss-dark);font-size:.85rem}
+  .r-name{font-weight:700;font-size:.92rem}
+  .r-meta{font-size:.78rem;color:var(--ink-soft)}
+  .review p{font-size:.92rem;line-height:1.5}
+
+  .map-line{margin-top:24px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:.92rem;color:var(--ink-soft);text-align:center;flex-wrap:wrap}
+  .map-line a{color:var(--clay);font-weight:700;text-decoration:underline}
+
+  /* FINAL CTA */
+  .final{background:linear-gradient(180deg,#F4EFE4 0%,#ECE1CF 100%);padding:52px 0 100px}
+  .form-card{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:26px 22px;max-width:420px;margin:0 auto 30px}
+  .fg{margin-bottom:14px}
+  .fg label{display:block;font-size:.82rem;font-weight:700;margin-bottom:5px;color:var(--ink-soft)}
+  .fg input{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-size:1rem;font-family:inherit;background:var(--cream);color:var(--ink)}
+  .fg input:focus{outline:none;border-color:var(--moss);background:#fff}
+  .form-card .btn{width:100%;margin-top:6px}
+  .contacts{text-align:center}
+  .phone-big{font-size:1.5rem;font-weight:800;color:var(--clay);display:block;margin-bottom:10px}
+  .contacts-info{color:var(--ink-soft);font-size:.92rem;line-height:1.65}
+  .contacts-info strong{color:var(--ink)}
+  .social{display:flex;justify-content:center;gap:12px;margin-top:18px}
+  .social a{width:46px;height:46px;border-radius:12px;background:var(--paper);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);font-size:1.25rem}
+
+  footer{text-align:center;padding:22px 20px 90px;font-size:.8rem;color:var(--ink-soft)}
+
+  .sticky-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);padding:10px 16px;padding-bottom:max(10px,env(safe-area-inset-bottom));display:flex;gap:10px;box-shadow:0 -4px 18px rgba(0,0,0,.08);z-index:100;border-top:1px solid var(--line)}
+  .sticky-bar .btn{flex:1;min-height:48px;padding:12px;font-size:.94rem}
+  .sticky-bar .btn-wa{background:#25D366;color:#fff;flex:0 0 52px;padding:0}
+
+  @media (min-width:768px){
+    .hero-grid{grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+    .services{grid-template-columns:repeat(2,1fr)}
+    .cases{grid-template-columns:repeat(3,1fr)}
+    .about-grid{grid-template-columns:.85fr 1.15fr;gap:44px}
+    .about-photo{margin:0}
+    .steps{grid-template-columns:repeat(4,1fr)}
+    .reviews{grid-template-columns:repeat(3,1fr)}
+    .sticky-bar{display:none}
+    footer{padding-bottom:30px}
+    .sec{padding:70px 0}
+  }
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><div class="brand-mark">🗣️</div><span>Елена Гайсина</span></div>
+    <a href="tel:+79600478844" class="nav-call">📞 +79600478844</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Учитель-логопед · Логопед-дефектолог</div>
+      <h1>Когда обычной логопедии недостаточно: глубокая диагностика и коррекция сложных нарушений речи с медицинской базой</h1>
+      <p class="lead">Запуск речи, коррекция ОНР, ФФНР, алалии, дизартрии, диспраксии и ринолалии. Понятный родителям маршрут и результат, подтверждённый годами практики.</p>
+      <div class="trust-row">
+        <span>⭐ 16 лет опыта</span>
+        <span>🎓 высшая категория</span>
+        <span>📈 90% выпускников с чистой речью</span>
+      </div>
+      <div class="cta-row">
+        <a href="tel:+79600478844" class="btn btn-primary">📞 Записаться на диагностику</a>
+        <a href="https://wa.me/[телефон]" class="btn btn-ghost" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=700&q=70&auto=format&fit=crop"
+           alt="Учитель-логопед занимается с ребёнком"
+           width="600" height="450" loading="eager" fetchpriority="high" decoding="async">
+      <div class="hero-badge">✨ Первая диагностика — понятный план коррекции</div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNS (заменяет тяжёлый JS-квиз: тот же эффект "это про нас", без скриптов) -->
+<section class="sec">
+  <div class="wrap">
+    <h2 class="sec-title">Пора обратиться, если замечаете</h2>
+    <p class="sec-sub">Даже один пункт — уже достаточный повод для диагностики</p>
+    <div class="signs-card">
+      <ul class="signs-list">
+        <li>Ребёнок почти не говорит или использует минимум слов для своего возраста</li>
+        <li>Речь смазанная, звуки искажены или пропускаются (в том числе «Р», шипящие, свистящие)</li>
+        <li>Диагностированы или заподозрены ОНР, ФФНР, алалия, дизартрия, диспраксия, ринолалия</li>
+        <li>Ребёнок плохо различает звуки на слух, путает похожие слова</li>
+        <li>Есть трудности с пониманием обращённой речи или коммуникацией</li>
+      </ul>
+      <p class="signs-note">Первая диагностика покажет точную картину и понятный маршрут — без обязательств и лишней тревоги.</p>
+      <a href="tel:+79600478844" class="btn btn-primary" style="width:100%">📞 Обсудить ситуацию бесплатно, 10 мин</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" style="background:#F4EFE4">
+  <div class="wrap">
+    <h2 class="sec-title">С какими запросами я работаю</h2>
+    <p class="sec-sub">Понятные формулировки без медицинских «страшилок»</p>
+    <div class="services">
+      <div class="svc"><div class="svc-ic">🌱</div><div><h3>Запуск речи у неговорящих детей</h3><p>Работа с пониманием речи и мотивацией к общению по современным методикам (Мельникова, Ткаченко, Сухова).</p></div></div>
+      <div class="svc"><div class="svc-ic">🗣️</div><div><h3>ОНР, ФФНР, алалия</h3><p>Глубокая диагностика и комплексная коррекция сложных речевых нарушений.</p></div></div>
+      <div class="svc"><div class="svc-ic">🧠</div><div><h3>Дизартрия, диспраксия, ринолалия</h3><p>Опора на медицинское образование при дифференциальной диагностике причин нарушения.</p></div></div>
+      <div class="svc"><div class="svc-ic">👂</div><div><h3>Развитие слухового восприятия</h3><p>Речь формируется на основе слуха — работа со слуховым вниманием как база коррекции.</p></div></div>
+      <div class="svc"><div class="svc-ic">💆</div><div><h3>Логопедический массаж</h3><p>В комплексной коррекционной работе, в том числе с элементами зондовых техник.</p></div></div>
+      <div class="svc"><div class="svc-ic">🎓</div><div><h3>Подготовка к школе</h3><p>Формирование лексико-грамматического строя речи с учётом ФГОС.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="sec">
+  <div class="wrap">
+    <h2 class="sec-title">Истории успеха</h2>
+    <p class="sec-sub">Реальные результаты — без громких обещаний</p>
+    <div class="cases">
+      <div class="case">
+        <div class="case-top"><div class="case-avatar">М</div><div><div class="case-name">Милена</div><div class="case-age">3 года</div></div></div>
+        <div class="case-ba">
+          <div class="case-before"><div class="case-label">Было</div>Безречевой ребёнок, минимум понимания обращённой речи, признаки алалии.</div>
+          <div class="case-after"><div class="case-label">Стало</div>Запущена фразовая речь, ребёнок инициирует общение самостоятельно.</div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case-top"><div class="case-avatar">Е</div><div><div class="case-name">Егор</div><div class="case-age">5 лет</div></div></div>
+        <div class="case-ba">
+          <div class="case-before"><div class="case-label">Было</div>Стёртая дизартрия, смазанная речь, диспраксия.</div>
+          <div class="case-after"><div class="case-label">Стало</div>Поставлены и автоматизированы все звуки.</div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case-top"><div class="case-avatar">К</div><div><div class="case-name">Кира</div><div class="case-age">6 лет</div></div></div>
+        <div class="case-ba">
+          <div class="case-before"><div class="case-label">Было</div>ОНР, бедный словарный запас, трудности с готовностью к школе.</div>
+          <div class="case-after"><div class="case-label">Стало</div>Сформирован лексико-грамматический строй речи, ребёнок готов к 1 классу.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" style="background:#F4EFE4">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=70&auto=format&fit=crop"
+           alt="Елена Гайсина — учитель-логопед" width="400" height="400" loading="lazy" decoding="async">
+    </div>
+    <div class="about">
+      <h2>Елена Гайсина</h2>
+      <p>Учитель-логопед и дефектолог высшей квалификационной категории с 16-летним опытом коррекции речевых нарушений у детей дошкольного возраста. Специализируюсь на глубокой диагностике и комплексной коррекции сложных речевых дефектов: ОНР, ФФНР, алалия, диспраксия, стёртая дизартрия, ринолалия, нарушения коммуникации.</p>
+      <p>Исхожу из принципа, что речь формируется на основе слуха: целенаправленное развитие слухового восприятия и внимания создаёт грамотную базовую основу для коррекции любого речевого нарушения. Первое высшее образование — медицинское (фармация): оно даёт углублённое понимание физиологических и неврологических механизмов речевых нарушений.</p>
+      <p>Владею логопедическим массажем, постоянно повышаю квалификацию (15+ курсов за 2023–2025 гг.). За 10 лет работы в детском саду (5 выпусков) более 90% воспитанников выпущены с чистой речью и полной готовностью к школе.</p>
+      <div class="stats">
+        <div class="stat"><div class="stat-num">16 лет</div><div class="stat-label">опыта</div></div>
+        <div class="stat"><div class="stat-num">90%</div><div class="stat-label">с чистой речью</div></div>
+        <div class="stat"><div class="stat-num">2</div><div class="stat-label">высших образования</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="sec">
+  <div class="wrap">
+    <h2 class="sec-title">Как проходит первая диагностика</h2>
+    <p class="sec-sub">Прозрачный процесс — вы всегда понимаете, что происходит</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div><h3>Звонок или заявка</h3><p>Перезваниваю в течение 15 минут, коротко уточняю запрос.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div><h3>Диагностика 45 мин</h3><p>Глубоко смотрим речь, слух, моторику, выявляем причину нарушения — без ощущения «проверки».</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h3>Индивидуальный маршрут</h3><p>Понятный документ: что хорошо, где нужна поддержка, какой коррекционный маршрут оптимален.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div><h3>Начало занятий</h3><p>Составляем индивидуальную программу, при необходимости — с логопедическим массажем.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" style="background:#F4EFE4">
+  <div class="wrap">
+    <h2 class="sec-title">Отзывы родителей</h2>
+    <p class="sec-sub">То, что говорят мамы и папы после работы</p>
+    <div class="reviews">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <div class="review-head"><div class="r-avatar">АА</div><div><div class="r-name">Алия А.</div><div class="r-meta">мама Марка, 4 года</div></div></div>
+        <p>Пришли с диагнозом алалия, ребёнок почти не говорил. Елена Александровна сразу расположила сына, объяснила план коррекции. Через несколько месяцев появилась фразовая речь.</p>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <div class="review-head"><div class="r-avatar">ДМ</div><div><div class="r-name">Дмитрий М.</div><div class="r-meta">папа Софии, 6 лет</div></div></div>
+        <p>Дочь стеснялась говорить из=за звуков. Занятия проходили в игре, дочь ждала их. Сейчас речь чистая, стала охотнее общаться со сверстниками.</p>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <div class="review-head"><div class="r-avatar">ЕС</div><div><div class="r-name">Елена С.</div><div class="r-meta">мама Артема, 7 лет</div></div></div>
+        <p>Ценю, что специалист сразу находит настоящую причину нарушения, а не просто «ставит звуки». По итогу пройденных занятий сын подготовился к школе, стал читать с удовольствием. Важно, что объяснили как заниматься дома.</p>
+      </div>
+    </div>
+    <div class="map-line">📍г. Казань· <a href="https://yandex.ru/maps/" target="_blank" rel="noopener">открыть на Яндекс.Картах</a></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="contacts">
+  <div class="wrap">
+    <h2 class="sec-title">Остались вопросы?</h2>
+    <p class="sec-sub">Оставьте номер — перезвоню в течение 15 минут</p>
+    <form class="form-card" onsubmit="submitForm(event)">
+      <div class="fg"><label for="name">Ваше имя</label><input type="text" id="name" name="name" placeholder="Как к вам обращаться" required autocomplete="name"></div>
+      <div class="fg"><label for="phone">Телефон</label><input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel"></div>
+      <button type="submit" class="btn btn-primary">Заказать обратный звонок</button>
+    </form>
+    <div class="contacts">
+      <a href="tel:+79600478844" class="phone-big">[телефон]</a>
+      <div class="contacts-info">
+        <strong>Адрес:</strong> г. Казань, ул. Восстания, д. 3<br>
+        <strong>График:</strong> с 8.00 до 17.00<br>
+        <strong>Формат:</strong> очно · частная практика
+      </div>
+      <div class="social">
+        <a href="https://wa.me/[телефон]" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+        <a href="https://t.me/he111e" target="_blank" rel="noopener" aria-label="Telegram">✈️</a>
+        <a href="tel:+79600478844" aria-label="Позвонить">📞</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 Елена Гайсина · Учитель-логопед, логопед-дефектолог<br>
+    <small>Информация на сайте носит ознакомительный характер и не является медицинской рекламой</small>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a href="tel:+79600478844" class="btn btn-primary">📞 Позвонить</a>
+  <a href="https://wa.me/[телефон]" class="btn btn-wa" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+</div>
+
+<script>
+function submitForm(e){
+  e.preventDefault();
+  var name=document.getElementById('name').value;
+  var phone=document.getElementById('phone').value;
+  alert('Спасибо, '+name+'! Я перезвоню на '+phone+' в течение 15 минут.');
+  e.target.reset();
+}
+document.getElementById('phone').addEventListener('input',function(e){
+  var v=e.target.value.replace(/\D/g,'');
+  if(v.startsWith('8'))v='7'+v.slice(1);
+  if(v.length>0 && !v.startsWith('7'))v='7'+v;
+  var f='';
+  if(v.length>0)f='+7';
+  if(v.length>1)f+=' ('+v.slice(1,4);
+  if(v.length>4)f+=') '+v.slice(4,7);
+  if(v.length>7)f+='-'+v.slice(7,9);
+  if(v.length>9)f+='-'+v.slice(9,11);
+  e.target.value=f;
+});
+</script>
+</body>
+</html>
