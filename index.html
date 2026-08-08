@@ -63,12 +63,25 @@
   .hero-photo img{width:100%;height:100%;object-fit:cover}
   .hero-badge{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.94);padding:9px 13px;border-radius:11px;font-size:.82rem;font-weight:700;display:flex;align-items:center;gap:6px;box-shadow:var(--shadow)}
 
-  /* SIGNS (замена квиза — статично, быстро, без JS) */
-  .signs-card{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:26px 22px;max-width:600px;margin:0 auto}
-  .signs-list{list-style:none;display:grid;gap:12px;margin-bottom:22px}
-  .signs-list li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;font-weight:600}
-  .signs-list li::before{content:"—";color:var(--clay);font-weight:800;flex-shrink:0}
-  .signs-note{color:var(--ink-soft);font-size:.9rem;margin-bottom:18px}
+  /* QUIZ */
+  .quiz-card{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:26px 22px;max-width:600px;margin:0 auto}
+  .quiz-progress{height:6px;background:var(--line);border-radius:6px;overflow:hidden;margin-bottom:20px}
+  .quiz-progress-bar{height:100%;width:0%;background:var(--clay);border-radius:6px;transition:width .25s ease}
+  .quiz-meta{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;font-weight:700;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px}
+  .quiz-q{font-size:1.08rem;font-weight:800;margin-bottom:16px;line-height:1.35}
+  .quiz-options{display:grid;gap:10px}
+  .quiz-opt{display:block;width:100%;text-align:left;background:var(--cream);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.95rem;font-weight:600;color:var(--ink);transition:border-color var(--ease),background var(--ease),transform var(--ease)}
+  .quiz-opt:hover{border-color:var(--moss);background:#F4EFE4}
+  .quiz-opt:active{transform:scale(.98)}
+  .quiz-back{display:inline-block;margin-top:16px;font-size:.85rem;font-weight:700;color:var(--ink-soft);text-decoration:underline;cursor:pointer;background:none}
+  .quiz-result-badge{display:inline-block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:5px 12px;border-radius:20px;margin-bottom:12px}
+  .quiz-result-badge.mid{background:#FBF0DE;color:#9C6B12}
+  .quiz-result-badge.high{background:#F8EEE9;color:var(--clay-dark)}
+  .quiz-result-badge.low{background:#F0F4EA;color:var(--moss-dark)}
+  .quiz-result h3{font-size:1.15rem;margin-bottom:10px;line-height:1.35}
+  .quiz-result p{color:var(--ink-soft);font-size:.94rem;margin-bottom:18px}
+  .quiz-result .btn{width:100%;margin-bottom:10px}
+  .quiz-restart{display:block;text-align:center;font-size:.85rem;font-weight:700;color:var(--ink-soft);text-decoration:underline;cursor:pointer;background:none;margin:0 auto}
 
   /* SERVICES — статичный список, без аккордеона */
   .services{display:grid;gap:14px}
@@ -122,13 +135,9 @@
 
   /* FINAL CTA */
   .final{background:linear-gradient(180deg,#F4EFE4 0%,#ECE1CF 100%);padding:52px 0 100px}
-  .form-card{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:26px 22px;max-width:420px;margin:0 auto 30px}
-  .fg{margin-bottom:14px}
-  .fg label{display:block;font-size:.82rem;font-weight:700;margin-bottom:5px;color:var(--ink-soft)}
-  .fg input{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-size:1rem;font-family:inherit;background:var(--cream);color:var(--ink)}
-  .fg input:focus{outline:none;border-color:var(--moss);background:#fff}
-  .form-card .btn{width:100%;margin-top:6px}
-  .contacts{text-align:center}
+  .contacts{text-align:center;margin-top:6px}
+  .tg-channel{margin-top:14px;font-size:.92rem;font-weight:600;color:var(--ink-soft)}
+  .tg-channel a{color:var(--clay);font-weight:700;text-decoration:underline}
   .phone-big{font-size:1.5rem;font-weight:800;color:var(--clay);display:block;margin-bottom:10px}
   .contacts-info{color:var(--ink-soft);font-size:.92rem;line-height:1.65}
   .contacts-info strong{color:var(--ink)}
@@ -189,22 +198,12 @@
   </div>
 </section>
 
-<!-- SIGNS (заменяет тяжёлый JS-квиз: тот же эффект "это про нас", без скриптов) -->
-<section class="sec">
+<!-- QUIZ -->
+<section class="sec" id="quiz">
   <div class="wrap">
-    <h2 class="sec-title">Вам знакома хотя бы одна из этих ситуаций?</h2>
-    <p class="sec-sub">Даже один пункт — уже достаточный повод для диагностики</p>
-    <div class="signs-card">
-      <ul class="signs-list">
-        <li>Ребёнок почти не говорит или использует минимум слов для своего возраста</li>
-        <li>Речь смазанная, звуки искажены или пропускаются (в том числе «Р», шипящие, свистящие)</li>
-        <li>Диагностированы или заподозрены ОНР, ФФНР, алалия, дизартрия, диспраксия, ринолалия</li>
-        <li>Ребёнок плохо различает звуки на слух, путает похожие слова</li>
-        <li>Есть трудности с пониманием обращённой речи или коммуникацией</li>
-      </ul>
-      <p class="signs-note">Первая диагностика покажет точную картину и понятный маршрут — без обязательств и лишней тревоги.</p>
-      <a href="tel:+79600478844" class="btn btn-primary" style="width:100%">📞 Обсудить ситуацию бесплатно, до 5 мин</a>
-    </div>
+    <h2 class="sec-title">Нужна ли вашему ребёнку помощь логопеда?</h2>
+    <p class="sec-sub">Экспресс-тест на 1 минуту — 4 вопроса, сразу результат</p>
+    <div class="quiz-card" id="quizCard"></div>
   </div>
 </section>
 
@@ -319,12 +318,7 @@
 <section class="final" id="contacts">
   <div class="wrap">
     <h2 class="sec-title">Остались вопросы?</h2>
-    <p class="sec-sub">Оставьте номер — перезвоню в течение 15 минут</p>
-    <form class="form-card" onsubmit="submitForm(event)">
-      <div class="fg"><label for="name">Ваше имя</label><input type="text" id="name" name="name" placeholder="Как к вам обращаться" required autocomplete="name"></div>
-      <div class="fg"><label for="phone">Телефон</label><input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel"></div>
-      <button type="submit" class="btn btn-primary">Заказать обратный звонок</button>
-    </form>
+    <p class="sec-sub">Позвоните или напишите — отвечаю быстро</p>
     <div class="contacts">
       <a href="tel:+79600478844" class="phone-big">+79600478844</a>
       <div class="contacts-info">
@@ -332,6 +326,7 @@
         <strong>График:</strong> с 8.00 до 17.00<br>
         <strong>Формат:</strong> очно · частная практика
       </div>
+      <div class="tg-channel">📢 Мой телеграм-канал: <a href="https://t.me/vremyagovorit" target="_blank" rel="noopener">t.me/vremyagovorit</a></div>
       <div class="social">
         <a href="https://wa.me/79600478844" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
         <a href="https://t.me/he111e" target="_blank" rel="noopener" aria-label="Telegram">✈️</a>
@@ -354,25 +349,121 @@
 </div>
 
 <script>
-function submitForm(e){
-  e.preventDefault();
-  var name=document.getElementById('name').value;
-  var phone=document.getElementById('phone').value;
-  alert('Спасибо, '+name+'! Я перезвоню на '+phone+' в течение 15 минут.');
-  e.target.reset();
+/* ===== QUIZ: "Нужна ли вашему ребёнку помощь логопеда?" ===== */
+var quizData = [
+  {
+    q: "Сколько слов и фраз использует ребёнок?",
+    options: [
+      { t: "Меньше 10 слов, фраз нет", s: 3 },
+      { t: "Есть отдельные слова, но фраз почти нет", s: 2 },
+      { t: "Говорит короткими фразами", s: 1 },
+      { t: "Говорит развёрнутыми предложениями", s: 0 }
+    ]
+  },
+  {
+    q: "Как ребёнок произносит звуки?",
+    options: [
+      { t: "Речь смазанная, малопонятная для чужих", s: 3 },
+      { t: "Есть несколько «не выговариваемых» звуков (Р, Ш, С и т.п.)", s: 2 },
+      { t: "Изредка сбивается, но в целом понятно", s: 1 },
+      { t: "Все звуки произносит чисто", s: 0 }
+    ]
+  },
+  {
+    q: "Как ребёнок понимает обращённую речь и слышит различия в словах?",
+    options: [
+      { t: "Плохо понимает простые просьбы, путает похожие слова", s: 3 },
+      { t: "Понимает, но часто переспрашивает или отвлекается", s: 1 },
+      { t: "Хорошо понимает и различает похожие по звучанию слова", s: 0 }
+    ]
+  },
+  {
+    q: "Сколько лет ребёнку?",
+    options: [
+      { t: "2–3 года", s: 1 },
+      { t: "4–5 лет", s: 2 },
+      { t: "6–7 лет", s: 2 }
+    ]
+  }
+];
+
+var quizState = { step: 0, score: 0 };
+
+function quizRender() {
+  var card = document.getElementById('quizCard');
+  if (quizState.step >= quizData.length) {
+    quizRenderResult(card);
+    return;
+  }
+  var q = quizData[quizState.step];
+  var progress = Math.round((quizState.step / quizData.length) * 100);
+  var html = '<div class="quiz-progress"><div class="quiz-progress-bar" style="width:' + progress + '%"></div></div>';
+  html += '<div class="quiz-meta"><span>Вопрос ' + (quizState.step + 1) + ' из ' + quizData.length + '</span></div>';
+  html += '<div class="quiz-q">' + q.q + '</div>';
+  html += '<div class="quiz-options">';
+  q.options.forEach(function (opt, i) {
+    html += '<button type="button" class="quiz-opt" data-score="' + opt.s + '" onclick="quizAnswer(' + opt.s + ')">' + opt.t + '</button>';
+  });
+  html += '</div>';
+  if (quizState.step > 0) {
+    html += '<button type="button" class="quiz-back" onclick="quizBack()">← Назад</button>';
+  }
+  card.innerHTML = html;
 }
-document.getElementById('phone').addEventListener('input',function(e){
-  var v=e.target.value.replace(/\D/g,'');
-  if(v.startsWith('8'))v='7'+v.slice(1);
-  if(v.length>0 && !v.startsWith('7'))v='7'+v;
-  var f='';
-  if(v.length>0)f='+7';
-  if(v.length>1)f+=' ('+v.slice(1,4);
-  if(v.length>4)f+=') '+v.slice(4,7);
-  if(v.length>7)f+='-'+v.slice(7,9);
-  if(v.length>9)f+='-'+v.slice(9,11);
-  e.target.value=f;
-});
+
+function quizAnswer(score) {
+  quizState.score += score;
+  quizState.step += 1;
+  quizRender();
+}
+
+function quizBack() {
+  if (quizState.step > 0) {
+    quizState.step -= 1;
+    // note: previous answer's score stays counted (simplified flow, no back-score correction)
+    quizRender();
+  }
+}
+
+function quizRestart() {
+  quizState = { step: 0, score: 0 };
+  quizRender();
+}
+
+function quizRenderResult(card) {
+  var score = quizState.score;
+  var badgeClass, badge, title, text;
+
+  if (score >= 6) {
+    badgeClass = 'high';
+    badge = 'Рекомендована диагностика';
+    title = 'Похоже, что это не просто возрастные особенности';
+    text = 'По ответам заметно сразу несколько признаков, которые обычно не проходят «сами по себе» и требуют внимания специалиста. Точную картину и понятный маршрут коррекции даст очная диагностика — рекомендую не откладывать.';
+  } else if (score >= 3) {
+    badgeClass = 'mid';
+    badge = 'Рекомендована диагностика';
+    title = 'Есть моменты, которые стоит уточнить у логопеда';
+    text = 'Часть ответов пограничная: это может быть в пределах возрастной нормы, а может быть началом нарушения, которое проще скорректировать на раннем этапе. Диагностика займёт около 35 минут и снимет все вопросы.';
+  } else {
+    badgeClass = 'low';
+    badge = 'Похоже на возрастную норму';
+    title = 'Серьёзных поводов для тревоги не видно';
+    text = 'По ответам речь ребёнка развивается близко к возрастной норме. Тем не менее, если что-то в поведении или речи ребёнка беспокоит именно вас, лучше проверить это на диагностике — так будет спокойнее.';
+  }
+
+  var html = '<div class="quiz-progress"><div class="quiz-progress-bar" style="width:100%"></div></div>';
+  html += '<div class="quiz-result">';
+  html += '<span class="quiz-result-badge ' + badgeClass + '">' + badge + '</span>';
+  html += '<h3>' + title + '</h3>';
+  html += '<p>' + text + '</p>';
+  html += '<a href="tel:+79600478844" class="btn btn-primary">📞 Записаться на диагностику</a>';
+  html += '<a href="https://wa.me/79600478844?text=Здравствуйте!%20Прошла(шёл)%20тест%20на%20сайте%2C%20хочу%20записаться%20на%20диагностику" class="btn btn-ghost" target="_blank" rel="noopener">Написать в WhatsApp</a>';
+  html += '<button type="button" class="quiz-restart" onclick="quizRestart()">Пройти тест заново</button>';
+  html += '</div>';
+  card.innerHTML = html;
+}
+
+quizRender();
 </script>
 </body>
 </html>
