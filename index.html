@@ -3,9 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Учитель-логопед, логопед-дефектолог высшей категории. 10 лет опыта коррекции ОНР, ФФНР, алалии, дизартрии, диспраксии, ринолалии у детей дошкольного возраста. Запуск речи, логопедический массаж, подготовка к школе.">
+<meta name="description" content="Логопед-дефектолог для детей — очно в Казани и онлайн из любой точки. Диагностика, постановка и автоматизация звуков, запуск речи, коррекция ОНР, алалии, дизартрии, подготовка к школе. 10 лет опыта, высшая категория.">
 <meta name="theme-color" content="#C1583A">
-<title>Учитель-логопед Гайсина Елена | Коррекция речи у детей</title>
+<title>Логопед-дефектолог для детей — очно в Казани и онлайн | Елена Гайсина</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Елена Гайсина — учитель-логопед, логопед-дефектолог",
+  "description": "Логопед-дефектолог для детей: диагностика, постановка и автоматизация звуков, развитие речи, подготовка к школе. Приём очно в Казани и онлайн из любой точки мира.",
+  "areaServed": ["Казань", "Россия", "онлайн"],
+  "address": {"@type": "PostalAddress", "addressLocality": "Казань", "streetAddress": "ул. Восстания, д. 3", "addressCountry": "RU"},
+  "telephone": "+79600478844",
+  "priceRange": "$$",
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Логопед онлайн — диагностика"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Логопед-дефектолог онлайн — постановка и автоматизация звуков"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Подготовка к школе онлайн"}}
+  ]
+}
+</script>
 <style>
   :root{
     --cream:#FBF6EF;
@@ -87,8 +104,36 @@
   .services{display:grid;gap:14px}
   .svc{background:var(--paper);border-radius:var(--r-md);box-shadow:var(--shadow);padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
   .svc-ic{width:42px;height:42px;border-radius:10px;background:#F4EFE4;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
-  .svc h3{font-size:1rem;margin-bottom:4px}
+  .svc h3{font-size:1rem;margin-bottom:4px;display:flex;flex-wrap:wrap;align-items:center;gap:7px}
   .svc p{color:var(--ink-soft);font-size:.9rem}
+  .fmt-badge{display:inline-block;font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;padding:3px 8px;border-radius:20px;white-space:nowrap;vertical-align:middle}
+  .fmt-badge.online{background:#EAF1E4;color:var(--moss-dark)}
+  .fmt-badge.both{background:#F8EEE9;color:var(--clay-dark)}
+
+  /* FORMAT (очно/онлайн) */
+  .format-grid{display:grid;gap:16px}
+  .format-card{background:var(--paper);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:22px 20px;border-top:4px solid var(--moss)}
+  .format-card.is-online{border-top-color:var(--clay)}
+  .format-card h3{font-size:1.05rem;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .format-card p{color:var(--ink-soft);font-size:.92rem;margin-bottom:10px}
+  .format-card ul{list-style:none;display:grid;gap:7px;margin-bottom:4px}
+  .format-card li{font-size:.88rem;color:var(--ink-soft);padding-left:20px;position:relative}
+  .format-card li::before{content:"✓";position:absolute;left:0;color:var(--moss-dark);font-weight:800}
+  .format-card.is-online li::before{color:var(--clay-dark)}
+  .format-note{background:var(--paper);border-radius:var(--r-md);box-shadow:var(--shadow);padding:16px 18px;margin-top:14px;font-size:.9rem;color:var(--ink-soft);text-align:center}
+  .format-note strong{color:var(--ink)}
+
+  /* AUDIENCE (с кем работаю) */
+  .aud-grid{display:grid;gap:14px}
+  .aud{background:var(--paper);border-radius:var(--r-md);box-shadow:var(--shadow);padding:18px 20px;display:flex;gap:14px;align-items:flex-start}
+  .aud-ic{width:42px;height:42px;border-radius:10px;background:#F0F4EA;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+  .aud h3{font-size:.98rem;margin-bottom:4px}
+  .aud p{color:var(--ink-soft);font-size:.88rem}
+
+  /* APPROACH callouts within about */
+  .approach-list{display:grid;gap:10px;margin:16px 0}
+  .approach-item{background:var(--paper);border-radius:var(--r-md);box-shadow:var(--shadow);padding:13px 15px;font-size:.9rem;color:var(--ink-soft);border-left:3px solid var(--gold)}
+  .approach-item strong{color:var(--ink)}
 
   /* CASES */
   .cases{display:grid;gap:16px}
@@ -158,6 +203,8 @@
     .about-photo{margin:0}
     .steps{grid-template-columns:repeat(4,1fr)}
     .reviews{grid-template-columns:repeat(3,1fr)}
+    .format-grid{grid-template-columns:repeat(2,1fr)}
+    .aud-grid{grid-template-columns:repeat(2,1fr)}
     .sticky-bar{display:none}
     footer{padding-bottom:30px}
     .sec{padding:70px 0}
@@ -178,23 +225,59 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Учитель-логопед · Логопед-дефектолог</div>
-      <h1>Когда обычной логопедии недостаточно: глубокая диагностика и коррекция сложных нарушений речи с медицинской базой</h1>
-      <p class="lead">Запуск речи, коррекция ОНР, ФФНР, алалии, дизартрии, диспраксии и ринолалии. Понятный родителям маршрут и результат, подтверждённый годами практики.</p>
+      <div class="eyebrow">Учитель-логопед · Логопед-дефектолог · Специалист по сложным нарушениям речи с медицинской базой</div>
+      <h1>Возвращаю уверенность в общении: от первых слов до грамотного письма</h1>
+      <p class="lead">Помогаю детям, у которых речь развивается не так, как хотелось бы: нечёткие звуки, мало слов, трудное понимание, сложные диагнозы или просто хочется подготовить к школе. Спокойно разбираюсь в ситуации, провожу диагностику и составляю понятный маршрут. Вы всегда понимаете, что происходит и к чему мы идём.</p>
       <div class="trust-row">
-        <span>⭐ 10 лет опыта</span>
-        <span>🎓 высшая категория</span>
-        <span>📈 более 90% выпускников с чистой речью</span>
+        <span>⭐ 10 лет практики с детьми разного возраста</span>
+        <span>🎓 Высшая квалификационная категория</span>
+        <span>📈 Более 90% детей выпускаются с чистой, уверенной речью</span>
+        <span>🖥️ Онлайн-занятие из любой точки</span>
       </div>
       <div class="cta-row">
         <a href="tel:+79600478844" class="btn btn-primary">📞 Записаться на диагностику</a>
         <a href="https://wa.me/79600478844?text=Здравствуйте!%20Хочу%20проконсультироваться" class="btn btn-ghost" target="_blank" rel="noopener">Написать в WhatsApp</a>
       </div>
+      <div class="cta-row" style="margin-top:10px">
+        <a href="#format" class="btn btn-ghost" style="font-size:.9rem;min-height:44px;padding:10px 18px">🤔 Очно или онлайн — что подойдёт вашему ребёнку?</a>
+      </div>
     </div>
     <div class="hero-photo">
-     <img src="logo.jpg" alt="Учитель-логопед занимается с ребёнком">
+     <img src="logo.jpg" alt="Логопед-дефектолог занимается с ребёнком очно и онлайн">
       <div class="hero-badge">✨ Первая диагностика — понятный план коррекции</div>
     </div>
+  </div>
+</section>
+
+<!-- FORMAT: ОЧНО vs ОНЛАЙН -->
+<section class="sec" id="format">
+  <div class="wrap">
+    <h2 class="sec-title">Очно в Казани или онлайн — какой формат подойдёт вам</h2>
+    <p class="sec-sub">Онлайн-формат подходит не каждому ребёнку — честно разберём, что лучше в вашем случае</p>
+    <div class="format-grid">
+      <div class="format-card">
+        <h3>🏠 Очно в Казани</h3>
+        <p>Личный приём в кабинете, при необходимости — элементы пассивной артикуляционной гимнастики и механические приёмы постановки звуков.</p>
+        <ul>
+          <li>Нужен физический контакт</li>
+          <li>Сложные нарушения: дизартрия, диспраксия, ринолалия</li>
+          <li>Ребёнку 2–4 года и трудно удерживать внимание на экране</li>
+          <li>Нужна глубокая очная диагностика с первой встречи</li>
+        </ul>
+      </div>
+      <div class="format-card is-online">
+        <h3>🖥️ Онлайн из любой точки</h3>
+        <p>Занятия по видеосвязи — подходят детям, которые уже умеют удерживать внимание в формате «экран + взрослый рядом» и повторять за взрослым.</p>
+        <ul>
+          <li>Диагностика и консультация без переезда в Казань</li>
+          <li>Постановка и автоматизация звуков через игровые онлайн-приёмы</li>
+          <li>Развитие слухового восприятия и речи, фонематического слуха, связной речи</li>
+          <li>Подготовка к школе и работа с дисграфией, дислексией</li>
+          <li>Ребёнку от 4–5 лет, есть взрослый рядом на занятии</li>
+        </ul>
+      </div>
+    </div>
+    <div class="format-note">Не уверены, какой формат подойдёт именно вашему ребёнку? <strong>Пройдите короткий тест ниже</strong> или напишите — вместе определим формат уже на первой консультации.</div>
   </div>
 </section>
 
@@ -210,15 +293,57 @@
 <!-- SERVICES -->
 <section class="sec" style="background:#F4EFE4">
   <div class="wrap">
-    <h2 class="sec-title">С какими запросами я работаю</h2>
-    <p class="sec-sub">Понятные формулировки без медицинских «страшилок»</p>
+    <h2 class="sec-title">С какими запросами я работаю — очно и онлайн</h2>
+    <p class="sec-sub">Понятные формулировки без медицинских «страшилок». Логопед-дефектолог онлайн — там, где очный приём недоступен</p>
     <div class="services">
-      <div class="svc"><div class="svc-ic">🌱</div><div><h3>Запуск речи у неговорящих детей</h3><p>Работа с пониманием речи и мотивацией к общению по современным методикам (Мельникова, Ткаченко, Сухова).</p></div></div>
-      <div class="svc"><div class="svc-ic">🗣️</div><div><h3>ОНР, ФФНР, алалия</h3><p>Глубокая диагностика и комплексная коррекция сложных речевых нарушений.</p></div></div>
-      <div class="svc"><div class="svc-ic">🧠</div><div><h3>Дизартрия, диспраксия, ринолалия</h3><p>Опора на медицинское образование при дифференциальной диагностике причин нарушения.</p></div></div>
+      <div class="svc"><div class="svc-ic">🌱</div><div><h3>Запуск речи у неговорящих детей <span class="fmt-badge both">Очно и онлайн</span></h3><p>Работа с пониманием речи и мотивацией к общению по современным методикам (Мельникова, Ткаченко, Сухова). Консультативное сопровождение родителей. </p></div></div>
+      <div class="svc"><div class="svc-ic">🗣️</div><div><h3>ОНР, ФФНР, алалия <span class="fmt-badge both">Очно и онлайн</span></h3><p>Глубокая диагностика и комплексная коррекция сложных речевых нарушений.</p></div></div>
+      <div class="svc"><div class="svc-ic">🧠</div><div><h3>Дизартрия, диспраксия, ринолалия</h3><p>Опора на медицинское образование при дифференциальной диагностике причин нарушения. Рекомендую очный формат.</p></div></div>
       <div class="svc"><div class="svc-ic">👂</div><div><h3>Развитие слухового восприятия</h3><p>Речь формируется на основе слуха — работа со слуховым вниманием как база коррекции.</p></div></div>
-      <div class="svc"><div class="svc-ic">💆</div><div><h3>Логопедический массаж</h3><p>В комплексной коррекционной работе, в том числе с элементами зондовых техник.</p></div></div>
-      <div class="svc"><div class="svc-ic">🎓</div><div><h3>Подготовка к школе</h3><p>Формирование лексико-грамматического строя речи с учётом ФГОС.</p></div></div>
+      <div class="svc"><div class="svc-ic">💆</div><div><h3>Логопедический массаж</h3><p>В комплексной коррекционной работе, в том числе с элементами зондовых техник. Только по назначению и очно.</p></div></div>
+      <div class="svc"><div class="svc-ic">🎓</div><div><h3>Подготовка к школе <span class="fmt-badge both">Очно и онлайн</span></h3><p>Формирование лексико-грамматического строя речи, фонематического слуха и связной речи с учётом ФГОС.</p></div></div>
+      <div class="svc"><div class="svc-ic">🖥️</div><div><h3>Диагностика онлайн <span class="fmt-badge online">Онлайн</span></h3><p>Полноценная логопедическая диагностика по видеосвязи с понятным заключением и планом коррекции.</p></div></div>
+      <div class="svc"><div class="svc-ic">🔤</div><div><h3>Постановка и автоматизация звуков онлайн <span class="fmt-badge online">Онлайн</span></h3><p>Игровые упражнения и артикуляционная гимнастика перед экраном под моим контролем — работает для многих звуков.</p></div></div>
+      <div class="svc"><div class="svc-ic">💬</div><div><h3>Развитие речи онлайн <span class="fmt-badge online">Онлайн</span></h3><p>Расширение словарного запаса, грамматика, связная речь — регулярные онлайн-занятия с игровыми заданиями.</p></div></div>
+      <div class="svc"><div class="svc-ic">📋</div><div><h3>Индивидуальная программа <span class="fmt-badge both">Очно и онлайн</span></h3><p>Коррекционный маршрут собирается под конкретного ребёнка — с учётом диагноза, возраста и удобного формата занятий.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE: С КЕМ Я РАБОТАЮ -->
+<section class="sec">
+  <div class="wrap">
+    <h2 class="sec-title">С кем я работаю</h2>
+    <p class="sec-sub">Подбираю подход под возраст, диагноз и особенности ребёнка — очно и онлайн</p>
+    <div class="aud-grid">
+      <div class="aud">
+        <div class="aud-ic">👶</div>
+        <div>
+          <h3>Дети раннего возраста (2–3 года) с задержкой речевого развития</h3>
+          <p>Если ребёнок почти не говорит — работаем над запуском речи: пониманием обращённой речи, первыми словами и простыми фразами.</p>
+        </div>
+      </div>
+      <div class="aud">
+        <div class="aud-ic">🧒</div>
+        <div>
+          <h3>Дошкольники (3–7 лет): звукопроизношение, ОНР, алалия, дизартрия</h3>
+          <p>Ставлю и автоматизирую звуки, развиваю фонематический слух и связную речь, готовлю к школе.</p>
+        </div>
+      </div>
+      <div class="aud">
+        <div class="aud-ic">📖</div>
+        <div>
+          <h3>Школьники (7–12 лет) с трудностями письма и чтения</h3>
+          <p>Коррекция дисграфии и дислексии плюс работа над вниманием, памятью и саморегуляцией — чтобы успеваемость стала стабильнее.</p>
+        </div>
+      </div>
+      <div class="aud">
+        <div class="aud-ic">🌿</div>
+        <div>
+          <h3>Дети и подростки с ОВЗ (РАС, ЗПР, СДВГ и другие особенности)</h3>
+          <p>Развиваю коммуникацию и речь с учётом особенностей развития, подбираю понятные и комфортные именно ему методы.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -264,11 +389,15 @@
       <h2>Елена Гайсина</h2>
       <p>Здравствуйте, я Елена. Я учитель-логопед и дефектолог высшей квалификационной категории с 10-летним опытом коррекции речевых нарушений у детей дошкольного возраста. На первой встрече я не просто называю проблему, а объясняю родителям, что происходит с речью ребенка и что можно сделать дальше. Специализируюсь на глубокой диагностике и комплексной коррекции сложных речевых дефектов: ОНР, ФФНР, алалия, диспраксия, стёртая дизартрия, ринолалия, нарушения коммуникации.</p>
       <p>Исхожу из принципа, что речь формируется на основе слуха: целенаправленное развитие слухового восприятия и внимания создаёт грамотную базовую основу для коррекции любого речевого нарушения. Мое первое высшее медицинское образование позволяет мне видеть нейрофизиологические механизмы речевых нарушений. Я не просто ставлю звуки, я понимаю как работает мозг и нервная система вашего ребенка, на основании чего выстраиваю коррекционный маршрут.</p>
-      <p>Владею логопедическим массажем, постоянно повышаю квалификацию (15+ курсов за 2023–2025 гг.). За 10 лет работы в детском саду более 90% воспитанников выпущены с чистой речью и полной готовностью к школе.</p>
+      <div class="approach-list">
+        <div class="approach-item"><strong>Комплексная работа логопеда-дефектолога:</strong> учитываю не только речь, но и когнитивные и поведенческие особенности ребёнка.</div>
+        <div class="approach-item"><strong>Индивидуальный темп:</strong> строю занятия с опорой на особенности ребёнка — каждому свой темп и понятные именно ему методы.</div>
+      </div>
+      <p>Владею логопедическим массажем, постоянно повышаю квалификацию (15+ курсов за 2023–2025 гг.). За 10 лет работы в детском саду более 90% воспитанников выпущены с чистой речью и полной готовностью к школе. Принимаю очно в Казани и провожу занятия онлайн — формат подбираем вместе, исходя из возраста ребёнка и характера нарушения.</p>
       <div class="stats">
         <div class="stat"><div class="stat-num">10 лет</div><div class="stat-label">опыта</div></div>
         <div class="stat"><div class="stat-num">более 90%</div><div class="stat-label">с чистой речью</div></div>
-        <div class="stat"><div class="stat-num">2</div><div class="stat-label">высших образования (Казанский государственный медицинский университет и Казанский федеральный университет)</div></div>
+        <div class="stat"><div class="stat-num">2</div><div class="stat-label">высших образования (Казанский государственный медицинский университет и Казанский федеральный университет</div></div>
       </div>
     </div>
   </div>
@@ -302,7 +431,7 @@
       <div class="review">
         <div class="stars">★★★★★</div>
         <div class="review-head"><div class="r-avatar">ДМ</div><div><div class="r-name">Дмитрий М.</div><div class="r-meta">папа Софии, 6 лет</div></div></div>
-        <p>Дочь стеснялась говорить из=за звуков. Занятия проходили в игре, дочь ждала их. Сейчас речь чистая, стала охотнее общаться со сверстниками.</p>
+        <p>Дочь стеснялась говорить из-за звуков. Занятия проходили в игре, дочь ждала их. Сейчас речь чистая, стала охотнее общаться со сверстниками.</p>
       </div>
       <div class="review">
         <div class="stars">★★★★★</div>
@@ -310,7 +439,7 @@
         <p>Ценю, что специалист сразу находит настоящую причину нарушения, а не просто «ставит звуки». По итогу пройденных занятий сын подготовился к школе, стал читать с удовольствием. Важно, что объяснили как заниматься дома.</p>
       </div>
     </div>
-    <div class="map-line">📍г. Казань· <a href="https://yandex.ru/maps/?text=Казань,%20ул.%20Восстания,%20д.3" target="_blank" rel="noopener">открыть на Яндекс.Картах</a></div>
+    <div class="map-line">📍г. Казань· <a href="https://yandex.ru/maps/?text=Казань,%20ул.%20Восстания,%20д.5" target="_blank" rel="noopener">открыть на Яндекс.Картах</a></div>
   </div>
 </section>
 
@@ -318,13 +447,13 @@
 <section class="final" id="contacts">
   <div class="wrap">
     <h2 class="sec-title">Остались вопросы?</h2>
-    <p class="sec-sub">Позвоните или напишите — отвечаю быстро</p>
+    <p class="sec-sub">Позвоните или напишите — отвечаю быстро. Подскажу, какой формат подойдёт: очно в Казани или онлайн</p>
     <div class="contacts">
       <a href="tel:+79600478844" class="phone-big">+79600478844</a>
       <div class="contacts-info">
-        <strong>Адрес:</strong> г. Казань, ул. Восстания, д. 3 (рядом автобусная ост. "Солнышко")<br>
+        <strong>Адрес:</strong> г. Казань, ул. Восстания, д. 3<br>
         <strong>График:</strong> с 8.00 до 17.00<br>
-        <strong>Формат:</strong> очно · частная практика
+        <strong>Формат:</strong> очно в Казани · онлайн из любой точки · частная практика
       </div>
       <div class="tg-channel">📢 Мой телеграм-канал: <a href="https://t.me/vremyagovorit" target="_blank" rel="noopener">t.me/vremyagovorit</a></div>
       <div class="social">
